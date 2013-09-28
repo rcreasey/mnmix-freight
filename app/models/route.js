@@ -25,16 +25,4 @@ Route.virtual('endStationNameShort').get(function () {
   return this.endStation === null ? this.endStation : this.endStation.stationName.split(' ',1)
 });
 
-Route.virtual('is_deklein').get(function () {
-  if ( this.startStation === null || this.endStation === null ) {
-    return false;
-  } else if ( this.startStation.solarSystemID >= 30002889 && this.startStation.solarSystemID <= 30002956 ) {
-    return true;
-  } else if ( this.endStation.solarSystemID >= 30002889 && this.endStation.solarSystemID <= 30002956 ) {
-    return true;
-  } else {
-    return false;
-  }
-});
-
 module.exports = mongoose.model('Route', Route);

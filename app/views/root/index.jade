@@ -2,19 +2,16 @@ extends ../layout/default
 
 block content
   .jumbotron
-      h1 Rood Licht Handel BV
-      p Because monopolies suck.
+      h1 MNMIX Freight
 
   .container
     .row
       .col-md-4
         h2 Contract Details
-        .alert.alert-info
-          p This service is open to everyone blue to GSF!
         ul
           li 
             | Contract your items in a courier contract to the corp 
-            strong Rood Licht Handel BV
+            strong Moongoo Mining and Mixing
           li 
             | Set "Expiration" to 
             strong 7 days 
@@ -22,7 +19,7 @@ block content
             strong 7 days.
           li 
             | Maximum size of individual packages no greater than 
-            strong 367,000 m3.
+            strong 340,000 m3.
           li 
             | Set the collateral to 
             strong 0.
@@ -31,26 +28,14 @@ block content
             strong 1,000,000 Isk Minimum 
             | on each contract.
           li No maximum value on packages.
-        p Contracts from neutral alts from Jita are not a problem. Contracts from neutral alts from Nullsec to Jita is a no-go.
+        p Contracts from neutral alts from Jita are not a problem. 
+        p Contracts from neutral alts from null sec will be refused.
 
-      .col-md-4
+      .col-md-8
         h2 Route Rates
-        h3 Deklein Routes:
 
         table.table.table-striped.table-condensed
           tbody
           each route in routes
-            if route.is_deklein
-              include _row_route
-
-      .col-md-4
-        h2 &#160;
-        h3 War Front Routes:
-
-        table.table.table-striped.table-condensed
-          tbody
-          each route in routes
-            if ! route.is_deklein
-              include _row_route
-
+            include _row_route
 

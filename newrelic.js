@@ -1,5 +1,5 @@
 exports.config = {
-  app_name : ['MNMX Freight'],
+  app_name : ['MNMIX Freight'],
   license_key : process.env.NEW_RELIC_LICENSE_KEY,
   logging : {
     level : 'info'
